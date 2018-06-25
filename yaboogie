@@ -1,0 +1,41 @@
+import random
+import math
+import time
+
+# print("Hello World")
+
+
+def reset():
+    all=[0,0,0,0,0,0,0,0,0,0]
+
+
+def idkwhattodo():
+    print("welcome to the calculator what would you like to do")
+    opperand=input("What would you like to do?")[0].lower()
+    num1=int(input("What's your first number?"))
+    num2=int(input("What's your second number?"))
+    if opperand=="a":
+        print(num1+num2)
+    elif opperand=="s":
+        print(num1-num2)
+    elif opperand=="m":
+        print(num1*num2)
+    elif opperand=="d":
+        print(num1/num2)
+    else:
+        print("Please choose addition, subtraction, multiplication, or division.")
+
+def randomcount(amount,numarray):
+    for i in range(amount):
+        cur=random.randint(0,9)
+        numarray[cur]=numarray[cur]+1
+    for i in range(len(numarray)):
+        print(str(i)+ " came up "+str(100*int(numarray[i])/int(amount))+"% of the time")
+
+
+def main():
+    #idkwhattodo()
+    randomcount(1000000,[0,0,0,0,0,0,0,0,0,0])
+
+
+main()
